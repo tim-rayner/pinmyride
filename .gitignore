@@ -8,4 +8,5 @@ tmp
 .vscode
 .idea
 .env
+package-lock.json
 yarn.lock
