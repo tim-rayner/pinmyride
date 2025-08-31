@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+coverage
+logs
+tmp
+.nx
+.vscode
+.idea
+.env
+package-lock.json
+yarn.lock
