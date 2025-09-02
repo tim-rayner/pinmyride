@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from 'jest';
+
+const config: Config = {
   displayName: '@pinmyride/pinmyride-mobile',
   resolver: require.resolve('./jest.resolver.js'),
   preset: 'jest-expo',
@@ -20,3 +22,5 @@ module.exports = {
   },
   coverageDirectory: '../../coverage/apps/pinmyride-mobile'
 };
+
+export default config;
