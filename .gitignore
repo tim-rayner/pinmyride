@@ -10,3 +10,43 @@ tmp
 .env
 package-lock.json
 yarn.lock
+
+# Expo
+node_modules/
+.expo/
+.yarn/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+cache/
+test-output
+
+# TypeScript build outputs
+**/dist/
+**/out-tsc/
+**/*.d.ts
+**/*.js.map
+**/*.d.ts.map
+**/tsconfig.tsbuildinfo
+
+# Compiled JavaScript (keep source TypeScript files)
+**/*.js
+**/*.jsx
+!**/index.js
+!**/metro.config.js
+!**/jest.resolver.js
+!**/jest.config.ts
+!**/babel.config.js
+!**/.babelrc.js
+
+# Keep specific JS files that are part of the source
+!**/metro.config.js
+!**/jest.resolver.js
+!**/babel.config.js
+!**/.babelrc.js

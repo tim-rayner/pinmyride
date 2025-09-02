@@ -1,0 +1,10 @@
+# Build outputs
+dist/
+out-tsc/
+*.d.ts
+*.js.map
+*.d.ts.map
+tsconfig.tsbuildinfo
+
+# Keep source files
+!expo-env.d.ts
