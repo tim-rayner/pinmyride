@@ -41,17 +41,19 @@ jobs:
       # Install EAS CLI for Expo builds
       - run: npm install --global eas-cli
 
-      # Configure EAS CLI with token for CI builds
-      - run: eas login --non-interactive --token ${{ secrets.EXPO_TOKEN }}
+      # Configure EAS CLI with token for CI builds (only if token is available)
+      - name: Configure EAS CLI
+        if: ${{ secrets.EXPO_TOKEN != '' }}
+        run: eas login --non-interactive --token ${{ secrets.EXPO_TOKEN }}
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
-      - name: Run NX tasks
+      - name: Run NX tasks (with mobile builds)
         if: ${{ secrets.EXPO_TOKEN != '' }}
         run: npx nx affected -t lint test build typecheck
-      
+
       - name: Run NX tasks (without mobile builds)
         if: ${{ secrets.EXPO_TOKEN == '' }}
         run: npx nx affected -t lint test typecheck
