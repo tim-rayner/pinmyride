@@ -22,6 +22,8 @@
     "react-native-web": "*"
   },
   "devDependencies": {
-    "@types/react": "*"
+    "@types/react": "*",
+    "@types/node": "*",
+    "@types/jest": "*"
   }
 }
