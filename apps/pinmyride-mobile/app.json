@@ -1,7 +1,6 @@
 {
   "expo": {
     "name": "PinmyrideMobile",
-    "slug": "pinmyride-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -23,7 +22,6 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      
       [
         "expo-splash-screen",
         {
@@ -33,6 +31,13 @@
           "backgroundColor": "#ffffff"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "058a4147-746b-4659-8bbc-31a3853c47e3"
+      }
+    },
+    "owner": "rayn3r-studios",
+    "slug": "pin-my-ride"
   }
 }
