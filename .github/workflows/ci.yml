@@ -41,6 +41,11 @@ jobs:
       # Install EAS CLI for Expo builds
       - run: npm install --global eas-cli
 
+      # Configure EAS CLI with token for CI builds
+      - run: eas login --non-interactive --token ${{ secrets.EXPO_TOKEN }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       - run: npx nx affected -t lint test build typecheck
       # Nx Cloud recommends fixes for failures to help you get CI green faster. Learn more: https://nx.dev/ci/features/self-healing-ci
