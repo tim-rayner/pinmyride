@@ -48,6 +48,7 @@
   "dependencies": {
     "@expo/metro-config": "~0.20.14",
     "@expo/metro-runtime": "~5.0.4",
+    "@expo/vector-icons": "^15.0.2",
     "expo": "~53.0.10",
     "expo-router": "~5.1.5",
     "expo-splash-screen": "~0.30.9",
