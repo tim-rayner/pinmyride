@@ -6,6 +6,9 @@
       }
     },
     "owner": "rayn3r-studios",
-    "slug": "pin-my-ride"
+    "slug": "pin-my-ride",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
